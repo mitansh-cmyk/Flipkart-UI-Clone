@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body {
+    padding:0;
+    margin:0;
+    background-color: #edf0ee;
+}
+
+.navbar {
+    position:sticky;
+    top:0px;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    z-index:1001;
+    background-size: 100vw;
+}
+
+#tye{
+    position:relative;
+    margin-left: 20px;
+    margin-top: 6.8px;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: white;
+    border-top-left-radius: 3.8px;
+    border-bottom-left-radius: 3.8px;
+    border:grey solid 0.8px;
+    height:21px;
+    translate: -17px;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+.cartlogo {
+    margin-top: 3px;
+    position:relative;
+    width: 64px;
+}
+
+#cart {
+    position:absolute;
+    right:0;
+    top:0;
+    translate: 0 6px; 
+}
+
+.sellerlogo {
+    margin-top: 3px;
+    position:relative;
+    width:128px;
+}
+
+#slr {
+    position:absolute;
+    right:0;
+    top:0;
+    translate:0 5.1px
+}
+input {
+    width: 198px;
+}
+
+.lct {
+    padding:11px;
+    padding-bottom:29px;
+    margin:10px 16px 0px 16px;
+    background-color:white;
+    display:flex;
+    justify-content:space-between;
+}
+
+.moblctp{
+    position:relative;
+}
+
+#mob {
+    position:absolute;
+    text-align: center;
+}
+
+.flightlctp{
+    position:relative;
+}
+
+#flight {
+    position:absolute;
+    text-align: center;
+}
+
+.hflctp{
+    position:relative;
+}
+
+#hf {
+    position:absolute;
+    text-align: center;
+    translate:5px;
+}
+
+#mnt {
+    text-align: center;
+}
+
+#fashion {
+    text-align: center;
+}
+
+#electronics {
+    text-align: center;
+}
+
+.carousel {
+    margin:10px 16px 0px 16px;
+    margin-top:20px;
+    height:228px;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    
+}
+.slide{
+    animation:slider 16s linear infinite;
+}
+
+@keyframes slider {
+    0%,100%{
+        transform: translateX(0%);
+    }
+    15%{
+        transform:translateX(0%);
+    }
+    20%{
+        transform:translateX(-100%);
+    }
+    35%{
+        transform:translateX(-100%);
+    }
+    40%{
+        transform:translateX(-200%);
+    }
+    55%{
+        transform:translateX(-200%);
+    }
+    60%{
+        transform:translateX(-301%);
+    }
+    75%{
+        transform:translateX(-301%);
+    }
+    80%{
+        transform:translateX(-401%);
+    }
+    95%{
+        transform:translateX(-401%);
+    }
+}
+
+.Electronics {
+    padding:11px;
+    padding-bottom:29px;
+    margin:0px 16px 0px 16px;
+    background-color:white;
+    display:flex;
+    justify-content: space-between;
+    width:990px;
+}
+#titl {
+    padding:11px;
+    padding-bottom:29px;
+    margin:10px 16px 0px 16px;
+    background-color:white;
+    width:990px;
+}
+
+.erphn {
+    margin-left:17px;
+    position: relative;
+}
+#erptext {
+    padding-top:12px;
+    translate: -11px;
+}
+#earphonetextb {
+    position: absolute;
+    text-align: center;
+}
+
+.cmr {
+    position: relative;
+}
+#cmrtext {
+    padding-top:12px;
+    translate: -11px;
+}
+#cameratextb {
+    position: absolute;
+    text-align: center;
+}
+
+.watch {
+    position: relative;
+}
+#watchtext {
+    padding-top:12px;
+    translate: 4px;
+}
+#watchtextb {
+    position: absolute;
+    text-align: center;
+    transform: translateX(7.7px);
+}
+
+.monitors {
+    position: relative;
+    padding-top: 20px;
+}
+#monitorstext {
+    padding-top:12px;
+    translate: 26px;
+}
+#monitorstextb {
+    position: absolute;
+    text-align: center;
+    transform: translateX(11px);
+}
+.projector {
+    margin-right:17px;
+    position: relative;
+    padding-top: 15px;
+}
+#projectortext {
+    padding-top:12px;
+    translate: 26px;
+}
+#projectortextb {
+    position: absolute;
+    text-align: center;
+    transform: translateX(11px);
+}
+
+#plane {
+    margin-left: 10px;
+    position: absolute;
+    height: 276px;
+    translate: 119.31px -88px;
+}
+
+img:hover {
+    scale: 1.1;
+}
+
+.slide:hover {
+    scale:1;
+}
+
+.lg:hover {
+    scale:1;
+}
+
+#plane:hover {
+    scale:1;
+}
+
+#actfe_123{
+    display:flex;
+}
+
+.gadgets {
+    width:434px;
+    height:526px;
+    padding: 21px;
+    margin-left:16px;
+    margin-top: 0;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:40px;
+}
+
+.era_875 {
+    padding:12px 12px 0px 12px;
+    width:165px;
+    border: solid 1px rgb(190, 189, 189);
+    border-radius: 4.6px;
+}
+    
+#era_875t {
+    padding-top:10px;
+    text-decoration-color: #1f1f1f;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#shv {
+    font-size:18.78px ;
+    color: #108934;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nckb {
+    padding:12px 12px 0px 12px;
+    width:165px;
+    border: solid 1px rgb(190, 189, 189);
+    border-radius: 4.6px;
+}
+    
+#nckbt {
+    padding-top:10px;
+    text-decoration-color: #1f1f1f;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cvrs_vtr {
+    padding:12px 12px 0px 12px;
+    width:165px;
+    border: solid 1px rgb(190, 189, 189);
+    border-radius: 4.6px;
+}
+    
+#cvrs_vtrt {
+    padding-top:10px;
+    text-decoration-color: #1f1f1f;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.smr_twtc_h {
+    padding:12px 12px 0px 12px;
+    width:165px;
+    border: solid 1px rgb(190, 189, 189);
+    border-radius: 4.6px;
+}
+    
+#smr_twtc_ht {
+    padding-top:10px;
+    text-decoration-color: #1f1f1f;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#tga {
+    background-color: white;
+    padding:11px;
+    margin-left:16px;
+    width:454px;
+    margin-bottom:0;
+}
+
+#advtinmg {
+    position:absolute;
+    top:980px;
+    left:627px;
+}
+
+#hejio_674{
+    padding:11px;
+    margin:10px 16px 0px 16px;
+    background-color:white;
+}
+.eyru_267{
+    padding:11px;
+    padding-bottom:22px;
+    background-color: white;
+    margin:0px 16px 0px 16px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.tyhrgend_ekejr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tyhrgend_ekejrtxt{
+    padding-top:10px;
+}
+
+footer{
+    background-color:rgb(0,0,0);
+    color: #fff;
+    margin-top:20px;
+    height:50px;
+    font-size: xx-large;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+        </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div id="logo"><img
+                src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+                class="lg">
+        </div>
+        <div id="tye">
+            <input type="text" placeholder="Search for Products,Brands and...">
+            <div id="btn">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="cartlogo">
+            <a href="d"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+                    alt="cart"></a>
+            <div id="cart"><a href="d">CART</a></div>
+        </div>
+        <div class="sellerlogo">
+            <a href="d"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"
+                    alt="cart"></a>
+            <div id="slr"><a href="d">Become a Seller</a></div>
+        </div>
+        <div id="menu">
+            <a href="d"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg"
+                    alt="menu"></a>
+        </div>
+    </div>
+    <div class="lct">
+        <div class="mntlctp">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e00302d428f5c7be.png?q=10" alt="minutes">
+            <div id="mnt"><a href="d">Minutes</a></div>
+        </div>
+        <div class="moblctp">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/5f2ee7f883cdb774.png?q=100"
+                alt="mobie and tablets">
+            <div id="mob"><a href="d">Mobile & Tablets</a></div>
+        </div>
+        <div class="fashionlctp">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/ff559cb9d803d424.png?q=100" alt="fashion">
+            <div id="fashion"><a href="d">Fashion</a></div>
+        </div>
+        <div class="electronicslctp">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/af646c36d74c4be9.png?q=100"
+                alt="electronics">
+            <div id="electronics"><a href="d">Electronics</a></div>
+        </div>
+        <div class="hflctp">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/1788f177649e6991.png?q=100"
+                alt="homes & Furniture">
+            <div id="hf"><a href="d">Homes & Furniture</a></div>
+        </div>
+        <div class="flightlctp">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/3c647c2e0d937dc5.png?q=100" alt="flight">
+            <div id="flight"><a href="d">Flight Booking</a></div>
+        </div>
+    </div>
+    <div class="carousel">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1010/170/image/705dfcfcdffd2671.jpg?q=90" alt="slide1"
+            class="slide">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/1338bd4fc60390d8.jpg?q=90" alt="slide2"
+            class="slide">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1010/170/image/5b309e98775e22e4.jpg?q=90" alt="slide3"
+            class="slide">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1010/170/image/f22fbb32dfb1e531.jpeg?q=90" alt="slide4"
+            class="slide">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1010/170/image/076c4f2ee87225d7.jpg?q=90" alt="slide5"
+            class="slide">
+    </div>
+    <h1 id="titl">Best of Electronics</h1>
+    <div class="Electronics">
+        <div class="erphn">
+            <img src="https://rukminim2.flixcart.com/image/110/110/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=90" alt="earphone">
+            <div id="erptext"><a href="d">Best truewirel...</div>
+            <div id="earphonetextb"><b> grab now</b></a></div>
+        </div>
+        <div class="cmr">
+            <img src="https://rukminim2.flixcart.com/image/110/110/xif0q/dslr-camera/8/q/r/compact-camera-portable-small-point-and-shoot-digital-camera-for-original-imahec6vcssf4hzg.jpeg?q=90"
+                alt="camera">
+            <div id="cmrtext"><a href="d">Top Mirrorless... </div>
+            <div id="cameratextb"><b>shop now!</b></a></div>
+        </div>
+        <div class="watch">
+            <img src="https://rukminim2.flixcart.com/image/110/110/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=90"
+                alt="watch">
+            <div id="watchtext"><a href="d">Fastrack Smart...</div>
+            <div id="watchtextb"><b> From &#8377;1,399</b> </a></div>
+        </div>
+        <div class="monitors">
+            <img src="https://rukminim2.flixcart.com/image/110/110/xif0q/monitor/c/n/8/-original-imahf4rbgwtzquxh.jpeg?q=90"
+                alt="monitors">
+            <div id="monitorstext"><a href="d">Monitors</div>
+            <div id="monitorstextb"><b>From &#8377;6,599</b></a></div>
+        </div>
+        <div class="projector">
+            <img src="https://rukminim2.flixcart.com/image/110/110/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=90"
+                alt="projector">
+            <div id="projectortext"><a href="d">Projector </div>
+            <div id="projectortextb"><b>From &#8377;6,990</b></a></div>
+        </div>
+
+        <div><a href="e"><img src="https://rukminim2.flixcart.com/fk-p-flap/1000/1540/image/ce3cf81edb760559.jpg?q=90"
+                    id="plane"></a></div>
+    </div>
+    <div style="background-color: white;height:234.3px;margin:10px 16px 21.44px 16px;" id="actfe_123">
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/a8e2ebb6e3486665.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 5px;"></a>
+
+
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/a2c99766fe520090.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 5px;"></a>
+
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/1156864a33cbce2e.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 16px;"></a>
+
+    </div>
+    <h1 id="tga">Trending Gadets and Appliances</h1>
+    <div class="gadgets">
+        <div class="era_875">
+            <img src="https://rukminim1.flixcart.com/image/190/190/xif0q/headphone/s/r/9/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.jpeg?q=90"
+                alt="earphone" height="155" width="155px">
+            <div id="era_875t"><a href="d" id="shaverst">True Wireless</a></div>
+            <div id="shv"><a href="d" id="shv">Special Offer</a></div>
+        </div>
+        <div class="nckb">
+            <img src="https://rukminim1.flixcart.com/image/190/190/xif0q/headphone/q/v/k/soul-100-hours-playtime-wireless-neckband-earphone-ucool-original-imahffwhh97zede9.jpeg?q=90"
+                alt="neck band" height="155" width="155px">
+            <div id="nckbt"><a href="d" id="shaverst">Neckband</a></div>
+            <div id="shv"><a href="d" id="shv">Min. 50% Off</a></div>
+        </div>
+        <div class="cvrs_vtr">
+            <img src="https://rukminim1.flixcart.com/image/190/190/xif0q/cases-covers/back-cover/g/f/l/back-cover-for-apple-iphone-13-doubledicestore-original-imahehhvuhzb4dur.jpeg?q=90"
+                alt="phone covers" height="155" width="155px">
+            <div id="cvrs_vtrt"><a href="d" id="shaverst">Cases and Covers</a></div>
+            <div id="shv"><a href="d" id="shv">Min. 50% Off</a></div>
+        </div>
+        <div class="smr_twtc_h">
+            <img src="https://rukminim1.flixcart.com/image/190/190/xif0q/smartwatch/s/i/u/-original-imah76jt64ffmwg4.jpeg?q=90"
+                height="155" width="155px" alt="shavers">
+            <div id="smr_twtc_ht"><a href="d" id="shaverst">Smart Watches </a></div>
+            <div id="shv"><a href="d" id="shv">Most-loved</a></div>
+        </div>
+    </div>
+    <a href="d"><img
+            src="https://rukminim2.flixcart.com/www/1070/750/promos/26/09/2023/ed27f892-1bc6-462f-805b-953f5add4f6a.jpg?q=90"
+            class="lg" height="627px" width="700px" id="advtinmg"></a>
+
+    <div style="background-color: white;height:234.3px;margin:10px 16px 21.44px 16px;" id="actfe_123">
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/89e3fe5995cef921.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 5px;"></a>
+
+
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/ade08a41e2c7f42a.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 5px;"></a>
+
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/092f06e4e97c607f.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 16px;"></a>
+
+    </div>
+
+    <div style="background-color: white;height:234.3px;margin:10px 16px 21.44px 16px;" id="actfe_123">
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/ddecc6b07fc019c8.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 5px;"></a>
+
+
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/a3a39bb834de6bfe.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 5px;"></a>
+
+
+        <a href="d"><img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/11d3e49dee8cd502.jpg?q=90"
+                height="234.3" width="433.78px" class="lg" style="margin-right: 16px;"></a>
+
+    </div>
+
+    <h2 id="hejio_674">Top Deals</h2>
+    <div class="eyru_267">
+        <div class="tyhrgend_ekejr">
+            <img src="https://rukminim1.flixcart.com/image/110/110/kx7vc7k0/acoustic-guitar/b/5/h/b-38c-redburst-blueberry-original-imag9qbehsruhqen.jpeg?q=90"
+                alt="guitar">
+            <div id="tyhrgend_ekejrtxt">
+                <a href="d">Giftable Instr...</a>
+            </div>
+            <div>
+                <a href="d"><b>Upto 70% off</b></a>
+            </div>
+        </div>
+
+        <div class="tyhrgend_ekejr">
+            <img src="https://rukminim1.flixcart.com/image/110/110/xif0q/bean-bag/4/i/h/xxxl-cushion-bean-bag-giglick-original-imagtq25pvpcmgyu.jpeg?q=90"
+                alt="Bean Bag">
+            <div id="tyhrgend_ekejrtxt"><a href="d">Bean Bag</a></div>
+            <div><a href="d"><b>From &#8377;999</b></a></div>
+        </div>
+
+        <div class="tyhrgend_ekejr">
+            <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/mat/t/g/i/medium-water-absorbent-microfiber-door-mat-2-ant-skid-bathroom-original-imah8vnefakgsmbs.jpeg?q=80"
+                alt="Floor Mat">
+            <div id="tyhrgend_ekejrtxt">
+                <a href="d">Floor Mats</a>
+            </div>
+            <div>
+                <a href="d"><b>&#8377;99</b></a>
+            </div>
+        </div>
+
+        <div class="tyhrgend_ekejr">
+            <img src="https://rukminim2.flixcart.com/image/120/120/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg?q=90"
+                alt="Perfume">
+            <div id="tyhrgend_ekejrtxt">
+                <a href="d">Perfume</a>
+            </div>
+            <div>
+                <a href="d"><b>Under &#8377;399</b></a>
+            </div>
+        </div>
+
+        <div class="tyhrgend_ekejr">
+            <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/sofa-set/e/x/h/74-74-peach-polyester-3-2-30-188-81-60-30-81-sofa-set-sydney-3-2-original-imahdwnzufzwghbz.jpeg?q=90"
+                alt="Pink sofa-set">
+            <div id="tyhrgend_ekejrtxt">
+                <a href="d">Sofas</a>
+            </div>
+            <div>
+                <a href="d"><b>From &#8377;5299</b></a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div>&copy;Mitansh Sehgal</div>
+    </footer>
+    
+</body>
+
+</html>
